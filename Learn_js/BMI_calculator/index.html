@@ -27,7 +27,7 @@
         <h2>BMI Weight Guide</h2>
         <p>Under weight = Less than 18.6</p>
         <p>Normal weight = 18.6 to 24.9</p>
-        <p>Under weight = Greater than 24.9</p>
+        <p>over weight = Greater than 24.9</p>
 
     </form>
 </body>
@@ -47,8 +47,16 @@
         }
         else{
          const bmi =   (weight/((weight*height)/1000)).toFixed(2)
-         result.innerHTML = `<span>${bmi}</span>`
+         if(bmi < 18.6){
+            result.innerHTML = `<span>${bmi}  As per data you are under weight</span>`
         }
+        if(bmi>=18.6 && bmi<=24.9){
+            result.innerHTML = `<span>${bmi}  As per data you are normal weight</span>`
+        }
+        if(bmi > 24.9){
+            result.innerHTML = `<span>${bmi}  As per data you are over weight</span>`
+        }
+    }
 
     })
 </script>
