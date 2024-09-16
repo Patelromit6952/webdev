@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-changer</title>
+    <!-- <script src="index.js"></script> -->
+</head>
+<style>
+    body{
+        background-color: whitesmoke;
+    }
+    .button{
+        background-color: black;
+        padding: 50px;
+        margin-right: 5px;
+        border: 1px solid black;
+    }
+    #grey{
+        background-color: grey;
+    }
+    #white{
+        background-color: white;
+    }
+    #blue{
+        background-color: blue;
+    }
+    #red{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="canvas">
+    <h1 style="text-align: center;">Color Changer Switcher</h1>
+    <br/>
+    <!-- <span class="button" id="grey"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span> -->
+    
+    <button class="button" id="grey" onclick="changeColor('grey')"></button>
+    <button class="button" id="white" onclick="changeColor('white')"></button>
+    <button class="button" id="blue" onclick="changeColor('blue')"></button>
+    <button class="button" id="red" onclick="changeColor('red')"></button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h2 style="text-align: center;">Try Clicking on one of the colours above 
+        <span>to change the background color of this page!</span>
+    </h2>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
