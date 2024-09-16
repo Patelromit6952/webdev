@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Number Guessing game</h1>
+        <p>Try and Guess a random number between 1 and 100 </p>
+        <p>You have 10 attempts to guess the right number</p>
+        <br/>
+        <form action="">
+            <label for="guessfield">Guess the number : </label>
+            <input type="text" name="guessfield" id="guessfield">
+            <button id="subt" >Submit Guess</button>
+        </form>
+        <div class="result">
+            <div id="re"></div>
+            <p>Previous Guesses : <span class="guesses"></span></p>
+            <p>Remaining Guesses : <span class="lastresult">10</span></p>
+            <p class="loworhi"></p>
+            <!-- <p></p> -->
+        </div>
+    </div>
+    <script>
+       var randomnumber = parseInt( Math.random()*100 + 1)
+       const submit = document.querySelector('#subt')
+       const userinput = document.querySelector('#guessfield')
+       const guessslot = document.querySelector('.guesses')
+       const remaining = document.querySelector('.lastresult')
+       const loworhi = document.querySelector('.loworhi')
+       const startover = document.querySelector('.result')
+       const p = document.createElement('p')
+
+       let prevguess = [];
+       let numguess = 1;
+       let playgame = true;
+       if(playgame){
+        submit.addEventListener('click',function(e){
+            e.preventDefault()
+           const guess = parseInt(userinput.value)
+           validateguess(guess)
+        })
+       }
+       function validateguess(guess){
+            if(isNaN(guess) || guess < 1 || guess > 100)
+            {
+                alert("please enter valid number in between 1 to 100")
+            }
+            else{
+                prevguess.push(guess)
+                if(numguess === 11){
+                    displayguess(guess)
+                    displaymsg(`game over , random number was ${randomnumber}`)
+                    endgame()
+                }
+                else{
+                    displayguess(guess)
+                    checkguess(guess)
+                }
+            }
+       }
+       function checkguess(guess){
+            if(guess === randomnumber){
+                displaymsg("you guessed right")
+                endgame()
+            }
+            else if(guess < randomnumber){
+                displaymsg("number is less than original number")
+            }
+            else if(guess > randomnumber){
+                displaymsg("number is greater than original number")
+            }
+        }
+        function displayguess(guess){
+            userinput.value = ''
+            guessslot.innerHTML +=`${guess} , `
+            numguess++;
+            remaining.innerHTML = `${11-numguess}` 
+        }
+        function displaymsg(msg){
+            loworhi.innerHTML = `<h2>${msg}</h2>`
+        }
+        function endgame(){
+            userinput.value = ''
+            userinput.setAttribute('disabled','')
+            p.classList.add('button')
+            p.innerHTML = `<Button class="newgame1">start new game</Button>`
+            startover.appendChild(p)
+            playgame = false
+            startgame()
+        }
+        function startgame(){
+            document.querySelector('.newgame1').addEventListener('click',function(e){
+                randomnumber = parseInt( Math.random()*100 + 1)
+                prevguess = []
+                numguess = 1;
+                guessslot.innerHTML = ''
+                remaining.innerHTML = `${11 - numguess}`;
+                loworhi.innerHTML = ''
+                userinput.removeAttribute('disabled')
+                startover.removeChild(p);
+                
+                playgame = true
+            })
+        }
+
+        // submit.addEventListener('submit',function(e){
+        //     e.preventDefault();
+        //     console.log(e.target.value);
+            
+        //     console.log(userinput)
+        //     console.log(randomnumber)
+        //     if(randomnumber == userinput){
+        //         document.getElementById('re').innerHTML = "congratulation you guessed right number"
+        //     }
+        //     else{
+        //         document.getElementById('re').innerHTML = "Oops! wrong"
+        //     }
+        // })
+
+    </script>
+</body>
+</html>
