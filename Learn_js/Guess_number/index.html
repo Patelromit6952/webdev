@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess Number</title>
 </head>
-<body>
+<body style="font-family: cursive;">
     <div id="wrapper">
-        <h1>Number Guessing game</h1>
-        <p>Try and Guess a random number between 1 and 100 </p>
-        <p>You have 10 attempts to guess the right number</p>
+        <h1 style="text-align: center; margin-top: 200px; font-family:'Times New Roman',Times, serif; font-size:40px;">Number Guessing game</h1>
+        <p style="text-align: center; font-size: 20px; margin: 0px;">Try and Guess a random number between 1 and 100 </p>
+        <p style="text-align: center; font-size: 20px; margin: 0px;">You have 10 attempts to guess the right number</p>
         <br/>
-        <form action="">
-            <label for="guessfield">Guess the number : </label>
+        <form action="" style="text-align: center;">
+            <label style="font-size: 20px;" for="guessfield">Guess the number : </label>
             <input type="text" name="guessfield" id="guessfield">
             <button id="subt" >Submit Guess</button>
         </form>
-        <div class="result">
+        <div class="result" style="text-align: center;">
             <div id="re"></div>
             <p>Previous Guesses : <span class="guesses"></span></p>
             <p>Remaining Guesses : <span class="lastresult">10</span></p>
