@@ -42,5 +42,28 @@ const myarr2 = new Array(1,2,3,4)
 // console.log(Array.of(score1,score2,score3))
 
 
+//object literals
+
+// Object.create
+
+const mysym = Symbol("key1")
+const jsuser = {
+    name:"romit",
+    [mysym]:"mykey1",
+    age:18,
+    location:"patan",
+    gmail:"rkp@gmail.com",
+    IsloggedIn:true
+}
+
+console.log(jsuser.name)
+console.log(jsuser["gmail"])  
+// console.log( typeof jsuser[mysym])
+// Object.freeze(jsuser)    // lock the object
 
 
+jsuser.greeting = function(){
+    console.log("hello js user ")
+    console.log(`hello ${this.name}`)
+}
+ console.log(jsuser.greeting())
