@@ -46,24 +46,34 @@ const myarr2 = new Array(1,2,3,4)
 
 // Object.create
 
-const mysym = Symbol("key1")
-const jsuser = {
-    name:"romit",
-    [mysym]:"mykey1",
-    age:18,
-    location:"patan",
-    gmail:"rkp@gmail.com",
-    IsloggedIn:true
-}
+// const mysym = Symbol("key1")
+// const jsuser = {
+//     name:"romit",
+//     [mysym]:"mykey1",
+//     age:18,
+//     location:"patan",
+//     gmail:"rkp@gmail.com",
+//     IsloggedIn:true
+// }
 
-console.log(jsuser.name)
-console.log(jsuser["gmail"])  
-// console.log( typeof jsuser[mysym])
-// Object.freeze(jsuser)    // lock the object
+// console.log(jsuser.name)
+// console.log(jsuser["gmail"])  
+// // console.log( typeof jsuser[mysym])
+// // Object.freeze(jsuser)    // lock the object
 
 
-jsuser.greeting = function(){
-    console.log("hello js user ")
-    console.log(`hello ${this.name}`)
-}
- console.log(jsuser.greeting())
+// jsuser.greeting = function(){
+//     console.log("hello js user ")
+//     console.log(`hello ${this.name}`)
+// }
+//  console.log(jsuser.greeting())
+
+// const tinderuser = new Object()  //singleton object
+const tinderuser = {}  // non-singleton Object
+
+ tinderuser.id = "123abc"
+ tinderuser.name = "romit"
+ tinderuser.isLoggedIn = false
+ console.log(tinderuser)
+
+ 
