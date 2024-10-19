@@ -1,9 +1,9 @@
-// array
+// // array
 
-const myarr = [0,1,2,3,4,5]
-const myheros = ["romit","patel"]
+// const myarr = [0,1,2,3,4,5]
+// const myheros = ["romit","patel"]
 
-const myarr2 = new Array(1,2,3,4)
+// const myarr2 = new Array(1,2,3,4)
 
 // myarr2.shift()                   // left side shift left most element is discarded 
 // console.log(myarr2.includes(1))  // return true if element is there otherwise return false
@@ -69,11 +69,82 @@ const myarr2 = new Array(1,2,3,4)
 //  console.log(jsuser.greeting())
 
 // const tinderuser = new Object()  //singleton object
-const tinderuser = {}  // non-singleton Object
+// const tinderuser = {}  // non-singleton Object
 
- tinderuser.id = "123abc"
- tinderuser.name = "romit"
- tinderuser.isLoggedIn = false
- console.log(tinderuser)
+//  tinderuser.id = "123abc"
+//  tinderuser.name = "romit"
+//  tinderuser.isLoggedIn = false
+//  console.log(tinderuser)
+
+//  const obj1 = {1:"a",2:"b"}
+//  const obj2 = {3:"c",4:"d"}
+
+//  const obj3 = Object.assign({},obj1,obj2)
+//  console.log(obj3);
+ 
+
+//  console.log("romit opatel");
 
  
+// console.log(Object.keys(tinderuser))
+// console.log(Object.values(tinderuser))
+// console.log(Object.entries(tinderuser))
+// console.log(tinderuser.hasOwnProperty('id'));
+
+// const course = {
+//     cousername : "js in hindi",
+//     price : "999",
+//     courseinstructor : "romit"
+// }
+// const {courseinstructor  : instructor} = course
+// console.log(instructor);
+// function addtwonum(num1,num2){
+//     // console.log(num1+num2)
+//     return num1+num2;
+// }
+// addtwonum(3,"a")
+// const result = addtwonum(45,89)
+// console.log(result);
+
+// function calculateprice(...num1){     // ... rest operator retrun array 
+//        return num1; 
+// }
+// console.log(calculateprice(222,456,489));
+
+
+// const user = {
+//     name:"romit",
+//     price : 199
+// }
+
+// function handleObject (anyobject){
+//     console.log(`Username is ${anyobject.name} and price is ${anyobject.price}`);
+    
+// }
+
+// handleObject(user)
+
+// const user = {
+//     username : "romit",
+//     price  : 199,
+//     welcomemsg : function(){
+//         console.log(`${this.username} , welcome to website`);
+//         console.log(this);
+        
+//     }
+
+// }
+
+// user.username = "rk"
+// user.welcomemsg()
+// function chai (){
+//     console.log(this);
+    
+// }
+// chai()
+
+// arrow function in javascript
+
+const chai =  () => {
+
+}
