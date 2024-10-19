@@ -145,6 +145,22 @@
 
 // arrow function in javascript
 
-const chai =  () => {
+// const add =  (num1,num2) =>  (num1+num2);
+// const subtract = (num1,num2) => {
+//     return num1-num2;
+// }
+// console.log(add(58,2));
+// console.log(subtract(58,2));
 
-}
+// IIFE   immediately invoked function Expresstions    used for remove pollution in global scope
+
+// (function chai (){   // named IIFE
+//     console.log("DB connected");
+    
+// })();
+
+// ((name) => {      //   unnamed IIFE
+//     console.log("DB connected two ${name}");
+    
+// })("romit");
+
