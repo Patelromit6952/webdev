@@ -130,7 +130,7 @@
 //     welcomemsg : function(){
 //         console.log(`${this.username} , welcome to website`);
 //         console.log(this);
-        
+    
 //     }
 
 // }
@@ -152,7 +152,7 @@
 // console.log(add(58,2));
 // console.log(subtract(58,2));
 
-// IIFE   immediately invoked function Expresstions    used for remove pollution in global scope
+// IIFE   immediately invoked function Expresstions    used for remo*ve pollution in global scope
 
 // (function chai (){   // named IIFE
 //     console.log("DB connected");
@@ -163,4 +163,30 @@
 //     console.log("DB connected two ${name}");
     
 // })("romit");
+
+// for (let i = 0; i < 10; i++) {
+//     console.log(i+1);
+    
+// // }
+// for (let i = 0; i < 10; i++) {
+//     for (let j = 0; j < 2; j++) {
+//         console.log(j+i);
+        
+//     }
+// }
+
+// const arr = [4,5,6,8,9]
+// for(const num of arr){
+//     console.log(num);
+    
+// // }
+
+// const map = new Map()
+// map.set('IN',"INDIA")
+// map.set('US',"USA")
+// // console.log(map);
+// for(const [key,value] of map){
+//     console.log(key  + value);
+    
+// }
 
