@@ -53,7 +53,28 @@
         // div.appendChild(addtext)
         // document.body.appendChild(div)
 
-        
+        // function addlanguage( langname ){
+        //     const li = document.createElement('li');
+        //     li.innerHTML=`${langname}`;
+        //     document.querySelector('.lang').appendChild(li)
+        // }
+        // addlanguage("java")
+        // addlanguage("c++")
+
+        function addoptilang(langname){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langname))
+            document.querySelector('.lang').appendChild(li)   
+        }
+
+         addoptilang("java")
+        addoptilang("c++")
+
+        const secondlang = document.querySelector("li:nth-child(2)")
+        secondlang.innerHTML = "python"
+        const newli = document.createElement('li');
+        newli.textContent = "mojo"
+        secondlang.replaceWith(newli)
     </script>   
 </body>
 </html>
