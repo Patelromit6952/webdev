@@ -190,3 +190,112 @@
     
 // }
 
+
+// const promiseone = new Promise(function(resolve,reject){
+//     // do an async task
+//     //db calls , cryptography,network
+//     setTimeout(() => {
+//         console.log("Async task is completed");
+//         resolve()
+        
+//     }, 1000);
+// })
+// promiseone.then(function(){
+//     console.log("promise is consumed");
+    
+// })
+
+// new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("Async task two");
+//         resolve()
+//     },1000)
+// }).then( () => {
+//     console.log("Async two resolved");
+    
+// })
+
+// const promisethree = new Promise((resolve,reject) => {
+//     setTimeout(()=>{
+//         resolve({username:"chai",email:"rk@gmail.com"})
+//     },1000)
+// })
+// promisethree.then((user)=>{
+//     console.log(user.email);
+//     console.log(user.username);
+        
+// })
+
+// const promisefour = new  Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         let error = true
+//         if(!error) {
+//             resolve({username : "romit ", password:"123456"})
+//         }
+//         else{
+//             reject("promise rejected")
+//         }
+//     },2000)
+// })
+// promisefour.then((user)=>{
+//     // console.log(user);
+//     return user.username
+// }).then((username)=>{
+//     console.log(username);
+    
+// }).catch((error)=>{
+//     console.log(error);
+    
+// }).finally(()=>{
+//     console.log("finall worked");
+    
+// })
+
+
+// const promisefive = new Promise((resolve,reject) => {
+//     setTimeout(()=>{
+//                 let error = true
+//                 if(!error) {
+//                     resolve({username : "javascript ", password:"123456"})
+//                 }
+//                 else{
+//                     reject("ERROR : JS WENT WRONG")
+//                 }
+//             },2000)
+// })
+
+// async function consumepromisefive() {
+//     try {
+//         const response =  await promisefive
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error);
+        
+//     }
+    
+// }
+// consumepromisefive()
+
+// async function getallusers(){
+//     try{
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json()
+//         console.log(data);
+        
+//     }catch(error){
+//         console.log("E: ",error);
+//     }
+ 
+// }
+
+// getallusers()
+
+// fetch('https://api.github.com/users/patelromit6952').then((response)=>{
+//     return response.json()
+// }).then((data)=>{
+//     console.log(data);  
+// }).catch((error)=>{
+//     console.log(error);
+    
+// })
+
