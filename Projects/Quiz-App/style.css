@@ -8,8 +8,9 @@ body {
 }
 
 .quiz-container {
-    width: 300px;
-    padding: 20px;
+    width: 500px;
+    padding: 10px;
+    height: fit-content;
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
@@ -18,12 +19,15 @@ body {
 
 #question {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .btn-container {
+    height: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
