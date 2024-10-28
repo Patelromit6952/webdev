@@ -1,3 +1,4 @@
+document.getElementById('next-btn').addEventListener('click',function(){
 fetch("https://opentdb.com/api.php?amount=15&category=19&difficulty=medium")
   .then(response => {
     if (!response.ok) {
@@ -6,6 +7,7 @@ fetch("https://opentdb.com/api.php?amount=15&category=19&difficulty=medium")
     return response.json();
   })
   .then(data => {
+    document.getElementById('next-btn').style.visibility = "hidden";
     const questions = data.results;
     let currentQuestion = 0;
 
@@ -35,3 +37,4 @@ fetch("https://opentdb.com/api.php?amount=15&category=19&difficulty=medium")
   .catch(error => {
     console.error("There was a problem with the fetch operation:", error);
   });
+})  
