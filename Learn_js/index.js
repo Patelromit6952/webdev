@@ -3,7 +3,7 @@
 // const myarr = [0,1,2,3,4,5]
 // const myheros = ["romit","patel"]
 
-// const myarr2 = new Array(1,2,3,4)
+// const myarr2 = new Array(1,2,3,4,5,6)
 
 // myarr2.shift()                   // left side shift left most element is discarded 
 // console.log(myarr2.includes(1))  // return true if element is there otherwise return false
@@ -285,7 +285,6 @@
 //     }catch(error){
 //         console.log("E: ",error);
 //     }
- 
 // }
 
 // getallusers()
@@ -297,5 +296,65 @@
 // }).catch((error)=>{
 //     console.log(error);
     
-// })
+// }
+
+// const user = {
+//     username: "romit",
+//     logincount  : 10 , 
+//     signedin : true,
+//     getuserdetails : function(){
+//         console.log(`username: ${this.username}`);
+//     },
+// } 
+
+// console.log(user.username);
+// console.log(user.getuserdetails())
+
+// function multiply(num){
+//     return num*5;
+// }
+// multiply.power = 2
+// console.log(multiply(5));
+// console.log(multiply.power);
+// console.log(multiply.prototype);
+
+// function createuser(username,score){
+//     this.username = username;
+//     this.score = score;
+// }
+
+// createuser.prototype.printme = function(username){
+//     console.log(`my name is : ${this.username}`);
+// }
+// createuser.prototype.value = function(score){
+//     console.log(`price is : ${this.score}`);
+// }
+// const chai = new createuser("chai",25)
+// const tea = new createuser("tea",250)
+
+// chai.printme()
+// chai.value()
+
+// class user {
+//     constructor (username,email,password){
+//         this.username=username;
+//         this.email=email;
+//         this.password = password;
+//     }
+
+//     encryptpassword(){
+//         return `${this.password}abc`
+//     }
+
+//     changeusername(){
+//         return `${this.username.toUpperCase()}`
+//     }
+// }
+
+// const chai = new user("romit","romit@gmail.com","123456")
+
+// console.log(chai.changeusername());
+// console.log(chai.encryptpassword());
+
+
 

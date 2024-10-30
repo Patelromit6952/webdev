@@ -1,5 +1,11 @@
 document.querySelector('#button').addEventListener('click',function(){
    const name = document.getElementById('username').value;
+//    console.log( typeof name);
+   
+   if(!name) {
+    alert("please enter valid name !")
+    return;
+   }
    const requesturl = `https://api.github.com/users/${name}`
    const xhr = new XMLHttpRequest();
    xhr.open('GET', requesturl)
@@ -9,8 +15,7 @@ document.querySelector('#button').addEventListener('click',function(){
            const data = JSON.parse(this.responseText)
            document.getElementById('followers').innerHTML = "Followers:"+ data.followers
            document.getElementById('followings').innerHTML = "Followings:"+data.following
-           document.getElementById('Repository').innerHTML = "Number_Of_Repository:"+data.public_repos
-           
+           document.getElementById('Repository').innerHTML = "Number_Of_Repository:"+data.public_repos     
        }
    }
    xhr.send()
