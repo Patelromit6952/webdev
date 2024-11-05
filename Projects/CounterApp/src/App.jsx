@@ -7,11 +7,11 @@ function App() {
   
   let [counter , setcounter] = useState(0);
   const addvalue = () => {
-    if(counter<20)
+    // if(counter<20)
       setcounter(counter+1);
   }
   const removevalue = () => {
-    if(counter>0)
+    // if(counter>0)
       setcounter(counter-1);
   }
 
