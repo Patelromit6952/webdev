@@ -34,13 +34,13 @@ import Github, { githubinfoloader } from './components/github/Github.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     
-       <Route path='/' element={<Layout />}>
-      <Route path='' element={<Home />} />
-      <Route path='about' element={<About />} />
-      <Route path='contactus' element={<Contactus />} />
-      <Route path='user/:userid' element={<User />} />
-      <Route loader={githubinfoloader} path='github' element={<Github />}/>
-    </Route>
+      <Route path='/' element={<Layout />}>
+        <Route path='' element={<Home />} />
+        <Route path='about' element={<About />} />
+        <Route path='contactus' element={<Contactus />} />
+        <Route path='user/:userid' element={<User />} />
+        <Route loader={githubinfoloader} path='github' element={<Github />}/>
+      </Route>
   )
 )
 
