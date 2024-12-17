@@ -24,7 +24,7 @@ router.post('/write',async(req,res)=>{
         res.status(200).json({
             success:true,
             message:"user successfully added.."
-        })
+        })+
     }
     catch(err){ 
         res.status(500).json({

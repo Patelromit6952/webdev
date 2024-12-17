@@ -21,12 +21,13 @@ const getproducts = async (req,res) => {
 const addproduct = async (req,res) => {
     try {
         
-        const {name,price,description,category} = req.body;
-        const newproduct = new product({name,price,description,category});
-        await newproduct.save();
+        // const {name,price,description,category} = req.body;
+        const newproduct = new product({name:req.body.name,price:req.body.price,description:req.body.description,category:req.body.category});
+        const saveduser =  await newproduct.save();
         res.json({
             success:true,
-            message:"product added successfully.."
+            message:"product added successfully..",
+            // data:saveduser
         })
     } catch (err) {
         res.status(500).json({

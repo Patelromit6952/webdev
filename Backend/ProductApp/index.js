@@ -1,8 +1,10 @@
 const express  = require('express')
 const dotenv = require('dotenv')
 const productrouter = require('./routes/route')
-const app = express()
-app.use(express.json())
+// const bodyParser = require('body-parser')
+const app = express();
+app.use(express.json());
+// app.use(bodyParser.json);
 dotenv.config();
 const port =  process.env.PORT
 const connectdb = require('./config/db');
