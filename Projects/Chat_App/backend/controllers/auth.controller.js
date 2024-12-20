@@ -1,6 +1,7 @@
 import { generateTokn } from "../lib/utils.js";
 import User  from "../models/user.model.js"
 import bcrypt from "bcryptjs"
+import cloudinary from "../lib/cloudinary.js"
 
 export const signup = async  (req,res) => {
     try {
@@ -83,3 +84,36 @@ try {
     res.status(500).json({message:"internal server error"})    
 }
 };
+
+export const updateprofile = async (req,res) => {
+ try {
+    const {profilepic} = req.body;
+    const userId = req.user._id;
+
+    if(!profilepic){
+        return res.status(400).json({
+            message:"profile pic is required"
+        })
+    }
+    const uploadresponse = await cloudinary.uploader.upload(profilepic)
+    const updateduser = await User.findByIdAndUpdate(userId,{profilepic:uploadresponse.secure_url},{new:true})
+    res.status(200).json({updateduser})
+} catch (error) {
+    console.log("error in update profile pic");
+    res.status(500).json({
+        message:"internal server error"
+    })
+ }   
+}
+
+export const checkauth = async (req,res) => {
+    try{
+        res.status(200).json(req.user)
+    }
+    catch(error){
+        console.log("error in checkauth controller");
+        res.status(500).json({
+            message:"internal server error."
+        })
+    }
+}
